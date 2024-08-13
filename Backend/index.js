@@ -5,11 +5,7 @@ const db = require("./db/db");
 const cors = require("cors");
 const Router = require("./routers/router");
 
-const corsOptions = {
-  origin: "http://localhost:5173",
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 app.use(Router);
 
