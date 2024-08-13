@@ -9,7 +9,6 @@ const corsOptions = {
   origin: "https://quoted-gold.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true,
 };
 
 app.use(cors(corsOptions));
