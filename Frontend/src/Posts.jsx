@@ -35,7 +35,7 @@ function Posts() {
 
   useEffect(() => {
     setLoader(true);
-    fetch("https://quoted-8uzscygtd-samidshads-projects.vercel.app/allposts", {
+    fetch("https://quotedapi-samidshads-projects.vercel.app/allposts", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -72,7 +72,7 @@ function Posts() {
     setDataArray(updatedDataArray);
 
     fetch(
-      `https://quoted-8uzscygtd-samidshads-projects.vercel.app/allposts/${postID}`,
+      `https://quotedapi-samidshads-projects.vercel.app/allposts/${postID}`,
       {
         method: "PATCH",
         headers: { "Content-type": "application/json" },
@@ -106,7 +106,7 @@ function Posts() {
     setDataArray(updatedDataArray);
 
     fetch(
-      `https://quoted-8uzscygtd-samidshads-projects.vercel.app/allposts/${postID}`,
+      `https://quotedapi-samidshads-projects.vercel.app/allposts/${postID}`,
       {
         method: "PATCH",
         headers: { "Content-type": "application/json" },
