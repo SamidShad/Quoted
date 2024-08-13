@@ -35,7 +35,7 @@ function Posts() {
 
   useEffect(() => {
     setLoader(true);
-    fetch("http://localhost:3000/allposts", {
+    fetch("https://quoted-8uzscygtd-samidshads-projects.vercel.app/allposts", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -71,13 +71,16 @@ function Posts() {
 
     setDataArray(updatedDataArray);
 
-    fetch(`http://localhost:3000/allposts/${postID}`, {
-      method: "PATCH",
-      headers: { "Content-type": "application/json" },
-      body: JSON.stringify(
-        updatedDataArray.find((post) => post._id === postID)
-      ),
-    });
+    fetch(
+      `https://quoted-8uzscygtd-samidshads-projects.vercel.app/allposts/${postID}`,
+      {
+        method: "PATCH",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify(
+          updatedDataArray.find((post) => post._id === postID)
+        ),
+      }
+    );
   }
 
   function postDislikeFunc(postID) {
@@ -102,13 +105,16 @@ function Posts() {
 
     setDataArray(updatedDataArray);
 
-    fetch(`http://localhost:3000/allposts/${postID}`, {
-      method: "PATCH",
-      headers: { "Content-type": "application/json" },
-      body: JSON.stringify(
-        updatedDataArray.find((post) => post._id === postID)
-      ),
-    });
+    fetch(
+      `https://quoted-8uzscygtd-samidshads-projects.vercel.app/allposts/${postID}`,
+      {
+        method: "PATCH",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify(
+          updatedDataArray.find((post) => post._id === postID)
+        ),
+      }
+    );
   }
 
   return (
