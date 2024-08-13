@@ -1,0 +1,27 @@
+.footer_area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  margin: 50px 10px 20px 10px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  padding: 25px 35px;
+  background-color: #40444b;
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer h1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer p {
+  font-size: 15px;
+  margin-top: 5px;
+}

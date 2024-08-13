@@ -1,0 +1,9 @@
+.loading_area {
+  width: 100%;
+  background-color: #202225;
+  height: 100%;
+  display: flex;
+  margin-top: 200px;
+  justify-content: center;
+  align-items: center;
+}

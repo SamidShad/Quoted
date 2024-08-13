@@ -1,0 +1,57 @@
+.createpost_area {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+}
+
+.createpost_inputs_area div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.createpost_area h1 {
+  font-size: 55px;
+  background-color: transparent;
+  font-weight: bold;
+  margin: 20px 0px 20px 0px;
+}
+
+.createpost_card {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  padding: 30px 35px;
+  background: #40444b;
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 10px;
+  margin: 40px;
+}
+
+.createpost_inputs_area {
+  background-color: #40444b;
+}
+
+.createpost_inputs_area p {
+  font-size: 20px;
+  background-color: #40444b;
+  color: white;
+}
+
+.createpost_inputs {
+  width: 100%;
+  background-color: #2f3136;
+  padding: 10px;
+  font-size: 20px;
+  outline: none;
+  border-radius: 5px;
+  margin: 5px 0px 25px 0px;
+  resize: none;
+}
+
+@media only screen and (max-width: 780px) {
+  .createpost_area h1 {
+    font-size: 30px;
+  }
+}
