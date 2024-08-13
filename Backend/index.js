@@ -6,9 +6,10 @@ const cors = require("cors");
 const Router = require("./routers/router");
 
 const corsOptions = {
-  origin: "https://quoted-gold.vercel.app",
+  origin: "http://localhost:5173",
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
 };
 
 app.use(cors(corsOptions));
