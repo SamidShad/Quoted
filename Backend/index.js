@@ -2,30 +2,17 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const db = require("./db/db");
+const cors = require("cors");
 const Router = require("./routers/router");
 
-// Custom CORS Middleware
-app.use((req, res, next) => {
-  res.setHeader(
-    "Access-Control-Allow-Origin",
-    "https://quoted-gold.vercel.app"
-  );
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, DELETE");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-  next();
-});
+const corsOptions = {
+  origin: "http://localhost:5173",
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+};
 
-// Handle Preflight Requests
-app.options("*", (req, res) => {
-  res.setHeader(
-    "Access-Control-Allow-Origin",
-    "https://quoted-gold.vercel.app"
-  );
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, DELETE");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-  res.sendStatus(204); // No content
-});
-
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(Router);
 
