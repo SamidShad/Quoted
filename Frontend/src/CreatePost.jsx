@@ -45,11 +45,11 @@ function CreatePost() {
               Back
             </Button>
           </Link>
-          <h1>What's your fact ?</h1>
+          <h1>What's your quote ?</h1>
 
           <div className={styles.createpost_inputs_area}>
             <div>
-              <p>Your fact</p>
+              <p>Your quote</p>
               {postData.postText.length == 280 ? (
                 <p style={{ color: "red" }}>{postData.postText.length}</p>
               ) : (
