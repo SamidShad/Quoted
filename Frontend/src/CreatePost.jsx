@@ -23,7 +23,7 @@ function CreatePost() {
   function createPostFunc() {
     postData.postText.length == 1
       ? toast.error("Just one character?")
-      : fetch("https://quotedapi-samidshads-projects.vercel.app/createpost", {
+      : fetch("http://localhost:3000/createpost", {
           method: "POST",
           headers: { "Content-type": "application/json" },
           body: JSON.stringify(postData),

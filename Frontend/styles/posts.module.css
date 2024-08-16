@@ -46,3 +46,13 @@
   background-color: transparent;
   font-size: 15px;
 }
+
+@media only screen and (max-width: 425px) {
+  .texts_container h1 {
+    font-size: 20px;
+    margin-right: 15px;
+  }
+  .post_card_footer span {
+    font-size: 15px;
+  }
+}
