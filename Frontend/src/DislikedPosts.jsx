@@ -133,7 +133,7 @@ function DislikedPosts() {
       {loader && <Loading />}
       <div className={styles.posts_container}>
         {(dataArray.length == 0 && !loader && (
-          <p>No posts yet... Add yours! ✨</p>
+          <p>No disliked posts yet—share yours! ✨</p>
         )) ||
           (dataArray &&
             [...dataArray].slice(0, 10).map((value, key) => {
