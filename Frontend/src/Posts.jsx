@@ -37,7 +37,7 @@ function Posts() {
 
   useEffect(() => {
     setLoader(true);
-    fetch("https://quoted-77xffmdb1-samidshads-projects.vercel.app/allposts", {
+    fetch("https://quoted-api.vercel.app/allposts", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -84,16 +84,13 @@ function Posts() {
     localStorage.setItem("userLikes", JSON.stringify([...userLike]));
     localStorage.setItem("userDislikes", JSON.stringify([...userDislike]));
 
-    fetch(
-      `https://quoted-77xffmdb1-samidshads-projects.vercel.app/allposts/${postID}`,
-      {
-        method: "PATCH",
-        headers: { "Content-type": "application/json" },
-        body: JSON.stringify(
-          updatedDataArray.find((post) => post._id === postID)
-        ),
-      }
-    );
+    fetch(`https://quoted-api.vercel.app/allposts/${postID}`, {
+      method: "PATCH",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(
+        updatedDataArray.find((post) => post._id === postID)
+      ),
+    });
   }
 
   function postDislikeFunc(postID) {
@@ -120,16 +117,13 @@ function Posts() {
     localStorage.setItem("userLikes", JSON.stringify([...userLike]));
     localStorage.setItem("userDislikes", JSON.stringify([...userDislike]));
 
-    fetch(
-      `https://quoted-77xffmdb1-samidshads-projects.vercel.app/allposts/${postID}`,
-      {
-        method: "PATCH",
-        headers: { "Content-type": "application/json" },
-        body: JSON.stringify(
-          updatedDataArray.find((post) => post._id === postID)
-        ),
-      }
-    );
+    fetch(`https://quoted-api.vercel.app/allposts/${postID}`, {
+      method: "PATCH",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(
+        updatedDataArray.find((post) => post._id === postID)
+      ),
+    });
   }
 
   return (

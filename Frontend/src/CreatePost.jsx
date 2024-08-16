@@ -23,14 +23,11 @@ function CreatePost() {
   function createPostFunc() {
     postData.postText.length == 1
       ? toast.error("Just one character?")
-      : fetch(
-          "https://quoted-77xffmdb1-samidshads-projects.vercel.app/createpost",
-          {
-            method: "POST",
-            headers: { "Content-type": "application/json" },
-            body: JSON.stringify(postData),
-          }
-        )
+      : fetch("https://quoted-api.vercel.app/createpost", {
+          method: "POST",
+          headers: { "Content-type": "application/json" },
+          body: JSON.stringify(postData),
+        })
           .then((res) => res.json())
           .then((data) => {
             data.message == "Fill all the inputs"
